@@ -1,3 +1,7 @@
+import turtle
+
+WIDTH, HEIGHT = 500, 500
+
 def get_number_of_racers():
     while True:
         racers = input("Enter the number of racers (2-10): ")
@@ -14,6 +18,12 @@ def get_number_of_racers():
         else:
             print("Input isn't a number, try again.")
 
+def init_turtle():
+    screen = turtle.Screen()
+    screen.setup(WIDTH, HEIGHT)
+    screen.title('Turtle Racing!')
+
+
 # Call the function and print the result
 racers = get_number_of_racers()
-print("Number of racers:", racers)
+init_turtle()
